@@ -1,0 +1,16 @@
+<%= form_tag products_path, method: 'get', id: 'search' do %>
+    <%= select_tag(:filter, options_for_select([ ['CS', 'CS'], ['Accounting', 'Accounting'] ], params[:filter])) %>
+    <%= submit_tag %>
+<% end %>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $("#search").on('change', function(){
+          alert("1");
+        $("#search").submit();
+      });
+  });
+
+</script>
